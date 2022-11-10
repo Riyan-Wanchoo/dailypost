@@ -22,7 +22,7 @@ const Footer = (props) => {
               <p className={styles.menu}>
                 <a href="#">Home</a>
                 <a href="#">About</a>
-                <a href="#">FAQ's</a>
+                <a href="#">FAQ&apos;s</a>
                 <a href="#">Contact Us</a>
               </p>
               <ul className={styles.ftco}>

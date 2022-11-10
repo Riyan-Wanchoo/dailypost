@@ -130,7 +130,7 @@ const Post = (props) => {
             <div className={styles.LatestNews}>
               {datanot && console.log(datanot)}
               {datanot && datanot.map((datanotItem) => {
-                return (<Link href={`/news/category/${datanotItem.attributes.Slug}`}><div className={styles.latestNewsItem}>
+                return (<Link href={`/news/category/${datanotItem.attributes.Slug}`} key={datanotItem.attributes.Slug}><div className={styles.latestNewsItem}>
                   <img src={process.env.apiHost + datanotItem.attributes.Image.data[0].attributes.url} alt="" />
                   <h6>{datanotItem.attributes.Title}</h6>
                 </div></Link>)
@@ -142,7 +142,7 @@ const Post = (props) => {
               <div className={styles.allNewsItems}>
                 {allData && allData.map((allDataItem) => {
                   return (
-                    <Link href={`/news/category/${allDataItem.attributes.Slug}`}><div className={styles.allNewsItem}>
+                    <Link href={`/news/category/${allDataItem.attributes.Slug}`} key={allDataItem.attributes.Slug}><div className={styles.allNewsItem}>
                       {/*Code this later*/}
                       <div className={styles.allNewsLeft}>
                         <img src={process.env.apiHost + allDataItem.attributes.Image.data[0].attributes.url} alt="" />
@@ -160,11 +160,11 @@ const Post = (props) => {
             </div>
           </div>
           <div className={styles.InnerRight}>
-            <h3>Don't Miss</h3>
+            <h3>Don&apos;t Miss</h3>
             <div className={styles.InnerRightNews}>
               {DontMiss && DontMiss.map((DontMissItem) => {
                 return (
-                  <Link href={`/news/category/${DontMissItem.attributes.Slug}`}><div className={styles.InnerRightNewsItem}>
+                  <Link href={`/news/category/${DontMissItem.attributes.Slug}`} key={DontMissItem.attributes.Slug}><div className={styles.InnerRightNewsItem}>
                     <div className={styles.NewsItemLeft}>
                       <img src={process.env.apiHost + DontMissItem.attributes.Image.data[0].attributes.url} alt="" />
                     </div>
