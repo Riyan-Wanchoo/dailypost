@@ -91,7 +91,7 @@ function Home(props) {
           <div className={styles.right}>
             <ul>
               <li>
-                <Link href={`/news/category/${props.Trending.data[1].attributes.Slug}`} legacyBehavior><a href="/news/String/slug2434">
+                <Link href={`/news/category/${props.Trending.data[1].attributes.Slug}`} legacyBehavior><a>
                   {/* <img src="/dailypost-logo.png" alt="" /> */}
                   <Image className={styles.imgWidth}
                     alt="Thumbnail"
@@ -106,7 +106,7 @@ function Home(props) {
               <div className={styles.hrEnd} />
               <li>
                 <Link href={`/news/category/${props.Trending.data[2].attributes.Slug}`} legacyBehavior>
-                  <a href="/news/String/slug232434">
+                  <a>
                     {/* <img src="/dailypost-logo.png" alt="" /> */}
                     <Image className={styles.imgWidth}
                       alt="Thumbnail"
@@ -121,7 +121,7 @@ function Home(props) {
               <div className={styles.hrEnd} />
               <li>
                 <Link href={`/news/category/${props.Trending.data[3].attributes.Slug}`} legacyBehavior>
-                  <a href="/news/String/slug232423434">
+                  <a>
                     {/* <img src="/dailypost-logo.png" alt="" /> */}
                     <Image className={styles.imgWidth}
                       alt="Thumbnail"
@@ -136,7 +136,7 @@ function Home(props) {
               <div className={styles.hrEnd} />
               <li>
                 <Link href={`/news/category/${props.Trending.data[4].attributes.Slug}`} legacyBehavior>
-                  <a href="/news/String/slug23344">
+                  <a>
                     {/* <img src="/dailypost-logo.png" alt="" /> */}
                     <Image className={styles.imgWidth}
                       alt="Thumbnail"
