@@ -256,7 +256,7 @@ function Home(props) {
             <div className={styles.two}>
               <h2>{CategoryItem}</h2>
               <Link href={`/news/${CategoryItem}`} legacyBehavior>
-                <a href="/">
+                <a>
                   <h5 style={{ marginBottom: "0px" }}> All {CategoryItem} <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16">
                     <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
                   </svg>
@@ -286,7 +286,7 @@ function Home(props) {
                 {props.Category[CategoryItem] && props.Category[CategoryItem].Trending.map((Trending) => {
                   return (<div key={Trending.id}>
                     <Link href={`/news/category/${Trending.attributes.Slug}`} legacyBehavior>
-                      <a href="/">
+                      <a>
                         <div className={styles.djhCard}>
                           <Image className={styles.malImg}
                             alt="Thumbnail"
