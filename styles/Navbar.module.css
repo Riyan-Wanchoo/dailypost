@@ -1,0 +1,128 @@
+.navbar{
+    user-select: none;
+}
+.head1{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 15px;
+    /* border-bottom: 1px solid #c2b1b1; */
+}
+.head1 img{
+    width: 107px;
+}
+.head2{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* margin: 15px 0px; */
+    padding: 8px 0px;
+    border-top: 1px solid #c2b1b1;
+    border-bottom: 1px solid #c2b1b1;
+}
+.head2 ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0 !important;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.head2 ul li{
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 22px;
+    text-decoration: underline;
+}
+.head2 ul li a{
+    text-decoration: none;
+    color: #6c757d;
+}
+.head2 ul li a:hover{
+    color: #0c6fa0;
+}
+.svg{
+    position: absolute;
+    left: 30px;
+    top: 70px;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+.date span{
+    border-right: 1px solid #aaa2a2;
+    padding: 0px 15px;
+}
+.newdelhi{
+    border-right: none !important;
+}
+.disabled{
+    display: none;
+}
+.account{
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    height: 40px;
+    cursor: pointer;
+}
+.divP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1161px) {
+    .head2 ul li{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 12px;
+    }
+  }
+@media only screen and (max-width: 934px) {
+    .head2 ul{
+        width: 61vw;
+        flex-direction: column;
+        position: relative;
+        background-color: #e2e2e2;
+    }
+    .head2{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
+        z-index: 20;
+        /* transition: all 0.5s ease-in-out; */
+    }
+    .disabled{
+        display: block;
+    }
+  }
+@media only screen and (max-width: 450px){
+    .date span{
+        padding: 0px 5px;
+    }
+}
+@media only screen and (max-width: 393px){
+    .newdelhi{
+        display: none;
+    }
+    .ISTtime{
+        border-right: none !important;
+    }
+}
+@media only screen and (max-width: 323px){
+    .time{
+        padding: 5px 2px;
+    }
+}

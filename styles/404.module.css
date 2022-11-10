@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=opensans:500);
+
+.container{
+    width: 75%;
+    height: 650px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.container a{
+    display: inline-block;
+    padding: 12px 30px;
+    font-weight: 700;
+    background-color: rgba(17, 116, 255, 0.714);
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    -webkit-transition: .2s all;
+    transition: .3s all;
+    cursor: pointer;
+}
+.container a:hover{
+    background-color: rgba(18, 107, 233, 0.992);
+}
+.container h2{
+    font-size: 146px;
+    margin: 0;
+    padding: 0;
+}
+.container h4{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #232323;
+    margin: 0;
+    padding: 0;
+}
+.container p{
+    padding: 0;
+    font-family: Montserrat;
+    color: #787878;
+}
+.innerCont{
+    left: 50%;
+    top: 50%;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.4;
+}
+.outerCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container img{
+    width: 540px;
+}
+@media only screen and (max-width: 1111px){
+    .container{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 940px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .outerCont{
+        margin: 130px 0px;
+    }
+}
+@media only screen and (max-width: 569px){
+    .container img{
+        width: 370px;
+    }
+    .container{
+        padding: 0px 20px;
+    }
+    .outerCont{
+        margin: 50px 0px;
+    }
+}
+@media only screen and (max-width: 425px){
+    .container img{
+        width: 320px;
+    }
+}
