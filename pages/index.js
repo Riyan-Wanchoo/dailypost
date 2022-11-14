@@ -628,9 +628,9 @@ export async function getServerSideProps() {
   }
 
   //Distinguishing between, TopNews, Latest News, Also Read
-  const slicedNT = notTrending.data.slice(0, 10);
-  const slicedAlsoRead = notTrending.data.slice(11, 17);
-  const slicedTopNews = notTrending.data.slice(18);
+  const slicedNT = notTrending.data.slice(0, 6);
+  const slicedAlsoRead = notTrending.data.slice(7, 13);
+  const slicedTopNews = notTrending.data.slice(14);
   return {
     props: {
       Trending: Trending,
