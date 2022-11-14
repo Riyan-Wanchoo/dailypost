@@ -92,32 +92,32 @@ const Post = (props) => {
           <div className={styles.InnerLeft}>
             <div className={styles.topNews}>
               <div className={styles.topNewsUp}>
-                {data.data && 
+                {data.data && data.data[0] &&  
                   <div className={styles.topNewsUpItem}>
                     <img src={process.env.apiHost + data.data[0].attributes.Image.data[0].attributes.url} alt="" />
                     <Link href={`/news/category/${data.data[0].attributes.Slug}`}><h2>{data.data[0].attributes.Title}</h2></Link>
                   </div>
                 }
-                {data.data && 
+                {data.data && data.data[1] &&
                   <div className={styles.topNewsUpItem}>
                     <img src={process.env.apiHost + data.data[1].attributes.Image.data[0].attributes.url} alt="" />
                     <Link href={`/news/category/${data.data[1].attributes.Slug}`}><h2>{data.data[1].attributes.Title}</h2></Link>
                   </div>}
               </div>
               <div className={styles.topNewsDown}>
-                {data.data && 
+                {data.data && data.data[2] &&
                   <div className={styles.topNewsDownItem}>
                     <img src={data.data && process.env.apiHost + data.data[2].attributes.Image.data[0].attributes.url} alt="" />
                     <Link href={`/news/category/${data.data[2].attributes.Slug}`}><h4>{data.data && data.data[2].attributes.Title}</h4></Link>
                   </div>
                 }
-                {data.data && 
+                {data.data && data.data[3] &&
                   <div className={styles.topNewsDownItem}>
                     <img src={data.data && process.env.apiHost + data.data[3].attributes.Image.data[0].attributes.url} alt="" />
                     <Link href={`/news/category/${data.data[3].attributes.Slug}`}><h4>{data.data && data.data[3].attributes.Title}</h4></Link>
                   </div>
                 }
-                {data.data && 
+                {data.data && data.data[4] &&
                   <div className={styles.topNewsDownItem}>
                     <img src={data.data && process.env.apiHost + data.data[4].attributes.Image.data[0].attributes.url} alt="" />
                     <Link href={`/news/category/${data.data[4].attributes.Slug}`}><h4>{data.data && data.data[4].attributes.Title}</h4></Link>
