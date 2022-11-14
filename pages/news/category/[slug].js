@@ -33,6 +33,7 @@ const Slug = (props) => {
   useEffect(() => {
     fetchComments(slug);
   }, [])
+  const [title, setTitle] = useState()
   const [encodedText, setEncodedText] = useState()
 
 
@@ -64,6 +65,7 @@ const Slug = (props) => {
       else {
         props.setProgress(100)
         setPost(OneNews)
+        setTitle(OneNews.data[0].attributes.Title)
 
         if (OneNews.data) {
           setDate(new Date(OneNews.data[0].attributes.publishedAt).toLocaleString(undefined, { timeZone: 'Asia/Kolkata', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }))
@@ -173,8 +175,7 @@ const Slug = (props) => {
     }
     setCommentTxt('')
   }
-  const Title = post.data[0].attributes.Title
-  setEncodedText(Title.split('|').join(""))
+  setEncodedText(title.split('|').join(""))
   return (
     <>
       {post && post == "NoNews" ? <NotFound /> :
