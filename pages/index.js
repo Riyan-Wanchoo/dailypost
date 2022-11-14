@@ -631,6 +631,8 @@ export async function getServerSideProps() {
   const slicedNT = notTrending.data.slice(0, 10);
   const slicedAlsoRead = notTrending.data.slice(11, 17);
   const slicedTopNews = notTrending.data.slice(18);
+
+  console.log(Trending)
   return {
     props: {
       Trending: Trending,
