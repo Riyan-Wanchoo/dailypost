@@ -61,7 +61,6 @@ function Home(props) {
   }
 
   const title = "Dailypost - Share awareness, gain awareness"
-  console.log(props)
   return (
     <div className={styles.container}>
       <Head>
@@ -124,6 +123,7 @@ function Home(props) {
                 <Link href={`/news/category/${props.Trending.data[3].attributes.Slug}`} legacyBehavior>
                   <a>
                     {/* <img src="/dailypost-logo.png" alt="" /> */}
+                    {console.log(props.Trending.data[3].attributes)}
                     <Image className={styles.imgWidth}
                       alt="Thumbnail"
                       src={process.env.apiHost + props.Trending.data[3].attributes.Image.data[0].attributes.url}
@@ -166,7 +166,7 @@ function Home(props) {
 
 
 
-          {props.TopNews && props.TopNews.map((TopNews) => {
+          {props.TopNews==[]?"No News to display":props.TopNews.map((TopNews) => {
             return (
               <div className={styles.storyItem} key={TopNews.id}>
                 <Link href={`/news/category/${TopNews.attributes.Slug}`} legacyBehavior>
@@ -220,7 +220,7 @@ function Home(props) {
         <div className={styles.mayAlsoLike}>
           <h5 className={styles.malHeader}>Also Read</h5>
 
-          {props.AlsoRead && props.AlsoRead.map((AlsoRead) => {
+          {props.AlsoRead==[]?"No news to display":props.AlsoRead.map((AlsoRead) => {
             return (
               <div className={styles.malItem} key={AlsoRead.id}>
                 <Link href={`/news/category/${AlsoRead.attributes.Slug}`} legacyBehavior>
@@ -631,8 +631,6 @@ export async function getServerSideProps() {
   const slicedNT = notTrending.data.slice(0, 10);
   const slicedAlsoRead = notTrending.data.slice(11, 17);
   const slicedTopNews = notTrending.data.slice(18);
-
-  console.log(Trending)
   return {
     props: {
       Trending: Trending,
