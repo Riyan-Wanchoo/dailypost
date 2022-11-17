@@ -49,6 +49,9 @@ function Home(props) {
       props.setProgress(100)
     }
 
+
+    console.log('Hello Guys, I aka Riyan Wanchoo made dailypost, if u didn\'t know :)')
+
   }, [])
   const goToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -64,7 +67,6 @@ function Home(props) {
   return (
     <div className={styles.container}>
       {/* Hello Guys, I aka Riyan made dailypost*/}
-      {console.log('%Hello Guys, I aka Riyan Wanchoo made dailypost, if u didn\'t know :)', 'font-size: 20px; color: orange')}
       <Head>
         <title>{title}</title>
       </Head>
