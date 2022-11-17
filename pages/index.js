@@ -63,6 +63,7 @@ function Home(props) {
   const title = "Dailypost - Share awareness, gain awareness"
   return (
     <div className={styles.container}>
+      {/* Hello Guys, I aka Riyan made dailypost*/}
       <Head>
         <title>{title}</title>
       </Head>
