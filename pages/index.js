@@ -64,6 +64,7 @@ function Home(props) {
   return (
     <div className={styles.container}>
       {/* Hello Guys, I aka Riyan made dailypost*/}
+      {console.log('%Hello Guys, I aka Riyan Wanchoo made dailypost, if u didn\'t know :)', 'font-size: 20px; color: orange')}
       <Head>
         <title>{title}</title>
       </Head>
@@ -124,7 +125,6 @@ function Home(props) {
                 <Link href={`/news/category/${props.Trending.data[3].attributes.Slug}`} legacyBehavior>
                   <a>
                     {/* <img src="/dailypost-logo.png" alt="" /> */}
-                    {console.log(props.Trending.data[3].attributes)}
                     <Image className={styles.imgWidth}
                       alt="Thumbnail"
                       src={process.env.apiHost + props.Trending.data[3].attributes.Image.data[0].attributes.url}
